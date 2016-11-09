@@ -35,7 +35,18 @@ def Main():
 	browser = webdriver.Chrome()    #browser object
 	browser.get("https://www.linkedin.com/uas/login")  #get login page
 
-	
+	emailElement = browser.find_element_by_id("session_key-login") #find element on login page using id
+	emailElement.send_keys(args.email)   #type into field what we type
+	passElement = browser.find_element_by_id("session_password-login")
+    passElement.send_keys(args.password)
+    passElement.submit()  #submit details
 
+    os.system('clear')
+    print "You are logged in! Bot is Starting"
+    ViewBot(browser)
+    browser.close()
+
+if __name__ == "__main__":
+	Main()
 
 
