@@ -1,0 +1,3 @@
+#session_key-login
+#session_password-login
+class="miniprofile new-miniprofile-container name"
